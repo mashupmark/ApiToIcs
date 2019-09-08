@@ -5,7 +5,7 @@ ics.createEvent({
   title: 'Test',
   description: 'Ein Test Event',
   start: [2019, 9, 8, 18, 0],
-  startInputType: "utc",
+  startInputType: "local",
   duration: { minutes: 60 }
 }, (error, value) => {
   if (error) {

@@ -1,5 +1,6 @@
 const { writeFileSync } = require('fs')
 const ics = require('ics')
+const moment = require('moment')
  
 ics.createEvents([{
   title: 'Test',
@@ -13,6 +14,7 @@ ics.createEvents([{
     description: 'Ein weiteres Test Event',
     start: [2019, 9, 8, 20, 0],
     startInputType: "local",
+    alarms: [],
     duration: { minutes: 30 }
   }
 ], (error, value) => {
@@ -21,5 +23,12 @@ ics.createEvents([{
   }
  
   console.log(value)
-  writeFileSync(`${__dirname}/event.ics`, value)
+  writeFileSync(`${__dirname}/events.ics`, value)
+
+  console.log("Pushing to GitHub...");
+  
+  require('simple-git')()
+    .add("./events.ics")
+    .commit("Update " + moment().format('YYYY-MM-DD:hh:mm:ss'))
+    .push(['-u', 'origin', 'master'], () => console.log("Done"));
 })

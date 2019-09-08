@@ -20,7 +20,7 @@ getJson('https://stuv-mosbach.de/survival/api.php?action=getLectures&course=INF1
         start: [Number(startDate[2]), Number(startDate[1]), Number(startDate[0]), Number(startTime[0]), Number(startTime[1])],
         duration: { minutes: event.duration },
         location: event.location,
-        organizer: { name: (event.lecturer === null || event.lecturer === '') ? 'unbekannt' : event.lecturer }
+        description:  (event.lecturer === null || event.lecturer === '') ? 'Tutor: unbekannt' : 'Tutor: ' + event.lecturer
       }
 
       entries.push(entry);

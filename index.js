@@ -4,7 +4,7 @@ const ics = require('ics')
 ics.createEvent({
   title: 'Test',
   description: 'Ein Test Event',
-  start: [2019, 9, 8, 19, 30],
+  start: [2019, 9, 8, 18, 0],
   startInputType: "utc",
   duration: { minutes: 60 }
 }, (error, value) => {

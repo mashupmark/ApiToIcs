@@ -30,10 +30,9 @@ getJson('https://stuv-mosbach.de/survival/api.php?action=getLectures&course=INF1
       if (error) {
         console.log(error)
       }
-    });
 
-    push(entries);
-    console.log(entries);
+      push(value);
+    });
   }).catch(function(error) {
     console.log(error);
   });

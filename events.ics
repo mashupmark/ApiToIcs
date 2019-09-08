@@ -1,1 +1,23 @@
-[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:ca7dea9f-90ad-4431-887d-1e9ff505f1f9
+SUMMARY:Test
+DTSTAMP:20190908T090200Z
+DTSTART:20190908T160000Z
+DESCRIPTION:Ein Test Event
+DURATION:PT60M
+END:VEVENT
+BEGIN:VEVENT
+UID:6c09e9ae-3093-46ff-9e1f-f2edbca2ec39
+SUMMARY:Test2
+DTSTAMP:20190908T090200Z
+DTSTART:20190908T180000Z
+DESCRIPTION:Ein weiteres Test Event
+DURATION:PT30M
+END:VEVENT
+END:VCALENDAR

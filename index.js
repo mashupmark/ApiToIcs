@@ -3,6 +3,8 @@ const ics = require('ics')
 const moment = require('moment')
 const getJson = require('get-json')
 
+require('simple-git')().pull();
+
 getJson('https://stuv-mosbach.de/survival/api.php?action=getLectures&course=INF18B')
   .then(function(response) {
 

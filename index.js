@@ -1,6 +1,4 @@
-const {
-  writeFileSync
-} = require('fs')
+const { writeFileSync } = require('fs')
 const ics = require('ics')
 const moment = require('moment')
 const getJson = require('get-json')

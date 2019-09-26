@@ -113,7 +113,7 @@ function addMeals(meals, entries) {
       if(first.start[0] === second.start[0] &&
         first.start[1] === second.start[1] &&
         first.start[2] === second.start[2]) {
-          entries[index].description += "\n\nMittagessen:\n" + meals[currentDay + index];
+          entries[index + 1].description += "\n\nMittagessen:\n" + meals[currentDay + index];
       }
     }
 }

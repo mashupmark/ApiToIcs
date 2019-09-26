@@ -1,4 +1,4 @@
-const writeFileSync = require('fs')
+const { writeFileSync } = require('fs')
 const ics = require('ics')
 const moment = require('moment')
 const getJson = require('get-json')
@@ -52,7 +52,6 @@ getJson('https://stuv-mosbach.de/survival/api.php?action=getLectures&course=INF1
         console.log(error)
       }
 
-      console.log(entries);
       push(value);
     });
   }).catch(function (error) {

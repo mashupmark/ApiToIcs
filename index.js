@@ -106,14 +106,14 @@ async function getMeals() {
 
 function addMeals(meals, entries) {
   var currentDay = moment().isoWeekday();
-    for (let index = 0; index < (6 - currentDay); index++) {
+    for (let index = 1; index < (6 - currentDay); index++) { //changed index from 0 to 1
       const first = entries[index];
       const second = entries[index + 1];
 
       if(first.start[0] === second.start[0] &&
         first.start[1] === second.start[1] &&
         first.start[2] === second.start[2]) {
-          entries[index + 1].description += "\n\nMittagessen:\n" + meals[currentDay + index];
+          entries[index + 1].description += "\n\nMittagessen:\n" + meals[currentDay + index]; //index?
       }
     }
 }

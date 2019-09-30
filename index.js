@@ -51,7 +51,7 @@ getJson('https://stuv-mosbach.de/survival/api.php?action=getLectures&course=INF1
       if (error) {
         console.log(error)
       }
-
+      
       push(value);
     });
   }).catch(function (error) {
@@ -77,21 +77,22 @@ async function getMeals() {
     var chars = response.text.split('\n');
 
     for (let index = 0; index < chars.length; index++) {
-      const element = chars[index];
-      switch (element) {
-        case 'Montag ':
+      var element = chars[index];
+      
+      switch (element.trim().toLowerCase()) {
+        case 'montag':
           meals[0] = chars[index + 1] + "\n" + chars[index + 2] + "\n" + chars[index + 3] + "\n" + chars[index + 4];
           break;
-        case 'Dienstag ':
+        case 'dienstag':
           meals[1] = chars[index + 1] + "\n" + chars[index + 2] + "\n" + chars[index + 3] + "\n" + chars[index + 4];
           break;
-        case 'Mittwoch ':
+        case 'mittwoch':
           meals[2] = chars[index + 1] + "\n" + chars[index + 2] + "\n" + chars[index + 3] + "\n" + chars[index + 4];
           break;
-        case 'Donnerstag ':
+        case 'donnerstag':
           meals[3] = chars[index + 1] + "\n" + chars[index + 2] + "\n" + chars[index + 3] + "\n" + chars[index + 4];
           break;
-        case 'Freitag ':
+        case 'freitag':
           meals[4] = chars[index + 1] + "\n" + chars[index + 2] + "\n" + chars[index + 3] + "\n" + chars[index + 4];
           break;
         default:

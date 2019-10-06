@@ -52,6 +52,8 @@ getJson('https://stuv-mosbach.de/survival/api.php?action=getLectures&course=INF1
         console.log(error)
       }
       
+      //console.log(entries);
+
       push(value);
     });
   }).catch(function (error) {
@@ -108,6 +110,10 @@ async function getMeals() {
 function addMeals(meals, entries) {
     let fertig = false;
     let index = 0;
+    
+    if (new Date().getDay() > 5 || new Date().getDay() < 1) {
+      fertig = true;
+    }
     
     while (fertig == false) {
       const first = entries[index];

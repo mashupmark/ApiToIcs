@@ -121,11 +121,6 @@ function addMeals(meals, entries) {
       const dateFirst = new Date(Date.UTC(first.start[0], first.start[1] - 1, first.start[2], first.start[3], first.start[4]));
       const dateSecond = new Date(Date.UTC(second.start[0], second.start[1] - 1, second.start[2], second.start[3], second.start[4]));
 
-      if (Math.ceil(Math.abs(dateSecond - dateFirst) / (1000 * 60 * 60 * 24)) > 1) {
-        fertig = true;
-        break;
-      }
-
       if (first.start[0] === second.start[0] &&
         first.start[1] === second.start[1] &&
         first.start[2] === second.start[2]) {

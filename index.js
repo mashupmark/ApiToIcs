@@ -108,28 +108,26 @@ async function getMeals() {
 }
 
 function addMeals(meals, entries) {
-    let fertig = false;
     let index = 0;
     
     if (new Date().getDay() > 5 || new Date().getDay() < 1) {
-      fertig = true;
+      return;
     }
     
-    while (fertig == false && index < entries.length - 1) {
+    while (index < entries.length - 1) {
       const first = entries[index];
       const second = entries[index + 1];
-      //const dateFirst = new Date(Date.UTC(first.start[0], first.start[1] - 1, first.start[2], first.start[3], first.start[4]));
+      const dateFirst = new Date(Date.UTC(first.start[0], first.start[1] - 1, first.start[2], first.start[3], first.start[4]));
       const dateSecond = new Date(Date.UTC(second.start[0], second.start[1] - 1, second.start[2], second.start[3], second.start[4]));
+
+      if (dateSecond.getDay() < dateFirst.getDay()) {
+        break;
+      }
 
       if (first.start[0] === second.start[0] &&
         first.start[1] === second.start[1] &&
         first.start[2] === second.start[2]) {
-          
           entries[index + 1].description += "\n\nMittagessen:\n" + meals[dateSecond.getDay() - 1];
-
-          if (dateSecond.getDay() >= 5) {
-            fertig = true; 
-          }
       }
       index++;
     }

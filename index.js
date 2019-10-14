@@ -115,10 +115,10 @@ function addMeals(meals, entries) {
       fertig = true;
     }
     
-    while (fertig == false) {
+    while (fertig == false && index < entries.length - 1) {
       const first = entries[index];
       const second = entries[index + 1];
-      const dateFirst = new Date(Date.UTC(first.start[0], first.start[1] - 1, first.start[2], first.start[3], first.start[4]));
+      //const dateFirst = new Date(Date.UTC(first.start[0], first.start[1] - 1, first.start[2], first.start[3], first.start[4]));
       const dateSecond = new Date(Date.UTC(second.start[0], second.start[1] - 1, second.start[2], second.start[3], second.start[4]));
 
       if (first.start[0] === second.start[0] &&

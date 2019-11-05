@@ -63,12 +63,12 @@ getJson('https://stuv-mosbach.de/survival/api.php?action=getLectures&course=INF1
 function push(value) {
   writeFileSync(`${__dirname}/events.ics`, value)
 
-  console.log("Pushing to GitHub...");
-
+  console.log("Saving...");
   require('simple-git')()
+    .pull(() => console.log("Pulled from Github"))
     .add("./events.ics")
     .commit("Update " + moment().format('YYYY-MM-DD:hh:mm:ss'))
-    .push(['-u', 'origin', 'master'], () => console.log("Done"));
+    .push(['-u', 'origin', 'master'], () => console.log("Pushed to Github"));
 }
 
 async function getMeals() {

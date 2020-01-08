@@ -20,7 +20,7 @@ jobs:
         node-version: 12.x
     - name: update Calendar
       run: |
-        yarn i
-        yarn run start
+        yarn install
+        npm run start
       env:
         CI: true

@@ -65,7 +65,6 @@ function push(value) {
 
   console.log("Saving...");
   // require('simple-git')()
-  //   .pull(() => console.log("Pulled from Github"))
   //   .add("./events.ics")
   //   .commit("Update " + moment().format('YYYY-MM-DD:hh:mm:ss'))
   //   .push(['-u', 'origin', 'master'], () => console.log("Pushed to Github"));

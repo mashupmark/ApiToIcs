@@ -1,6 +1,11 @@
 name: Update Calendar
 
-on: [push]
+on: 
+  push:
+    branches: 
+      - master
+  schedule:
+    - cron: '0 11,23 * * *'
 
 jobs:
   build:
@@ -15,7 +20,7 @@ jobs:
         node-version: 12.x
     - name: update Calendar
       run: |
-        npm i
+        yarn install
         npm run start
       env:
         CI: true

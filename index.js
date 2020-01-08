@@ -7,9 +7,9 @@ const crawler = require('crawler-request')
 getJson('https://stuv-mosbach.de/survival/api.php?action=getLectures&course=INF18B')
   .then(async function (response) {
 
-    var events = response.filter(function (event) {
-      return event.over === false && event.name !== "Studientag";
-    });
+    // var events = response.filter(function (event) {
+    //   return event.over === false && event.name !== "Studientag";
+    // });
 
     var entries = [];
     events.forEach(function (event) {

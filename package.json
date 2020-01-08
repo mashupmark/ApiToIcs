@@ -12,8 +12,8 @@
   "dependencies": {
     "crawler-request": "^1.2.2",
     "get-json": "^1.0.1",
-    "ics": "^2.16.0",
+    "ics": "^2.18.0",
     "moment": "^2.24.0",
-    "simple-git": "^1.126.0"
+    "simple-git": "^1.129.0"
   }
 }

@@ -14,13 +14,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    # - name: Use Node.js
-      # uses: actions/setup-node@v1
-      # with:
-        # node-version: 12.x
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
     - name: update Calendar
       run: |
-        npm i
-        npm run start
+        yarn i
+        yarn run start
       env:
         CI: true

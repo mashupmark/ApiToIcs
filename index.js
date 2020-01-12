@@ -67,7 +67,7 @@ function push(value) {
   // require('simple-git')()
   //   .add("./events.ics")
   //   .commit("Update " + moment().format('YYYY-MM-DD:hh:mm:ss'))
-  //   .push(['-u', 'origin', 'master'], () => console.log("Pushed to Github"));
+  //   .push(['-u', 'origin', 'master'], () => console.log("Pushed to Github")); 
 }
 
 async function getMeals() {

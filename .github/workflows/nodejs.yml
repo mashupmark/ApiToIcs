@@ -13,14 +13,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Use Node.js
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
+    - name: add git config
+      run: |
+        git config --local user.name "Action Worker"
+        git config --local user.email ""
     - name: update Calendar
       run: |
         npm i
         npm run start
+    - name: push changes
+      run: git push
       env:
         CI: true

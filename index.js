@@ -18,7 +18,7 @@ getJson('https://stuv-mosbach.de/survival/api.php?action=getLectures&course=INF1
 
       var entry = {
         title: event.name,
-        start: [Number(startDate[2]), Number(startDate[1]), Number(startDate[0]), Number(startTime[0]), Number(startTime[1])],
+        start: [Number(startDate[2]), Number(startDate[1]), Number(startDate[0]), Number(startTime[0]) - 1, Number(startTime[1])],
         duration: {
           minutes: event.duration
         },

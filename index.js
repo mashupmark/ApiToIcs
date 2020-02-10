@@ -12,11 +12,14 @@ getJson('https://stuv-mosbach.de/survival/api.php?action=getLectures&course=INF1
     });
 
     var entries = [];
+    let i = 0;
     events.forEach(function (event) {
       var startDate = event.start_date.split('.');
       var startTime = event.start_time.split(':');
 
       var entry = {
+        productId: "Vorlesungsplan",
+        uid: i++ + "@DHBWMosbach.de",
         title: event.name,
         start: [Number(startDate[2]), Number(startDate[1]), Number(startDate[0]), Number(startTime[0]) - 1, Number(startTime[1])],
         duration: {
